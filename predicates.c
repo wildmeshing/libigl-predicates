@@ -651,7 +651,7 @@ static float uniformfloatrand()
 /*                                                                           */
 /*****************************************************************************/
 
-void exactinit()
+void igl_exactinit()
 {
   REAL half;
   REAL check, lastcheck;
@@ -1627,7 +1627,7 @@ REAL detsum;
   return(D[Dlength - 1]);
 }
 
-REAL orient2d(pa, pb, pc)
+REAL igl_orient2d(pa, pb, pc)
 REAL *pa;
 REAL *pb;
 REAL *pc;
@@ -2299,7 +2299,7 @@ REAL permanent;
   return finnow[finlength - 1];
 }
 
-REAL orient3d(pa, pb, pc, pd)
+REAL igl_orient3d(pa, pb, pc, pd)
 REAL *pa;
 REAL *pb;
 REAL *pc;
@@ -3233,7 +3233,7 @@ REAL permanent;
   return finnow[finlength - 1];
 }
 
-REAL incircle(pa, pb, pc, pd)
+static REAL incircle(pa, pb, pc, pd)
 REAL *pa;
 REAL *pb;
 REAL *pc;
@@ -4165,7 +4165,7 @@ REAL permanent;
   return insphereexact(pa, pb, pc, pd, pe);
 }
 
-REAL insphere(pa, pb, pc, pd, pe)
+REAL igl_insphere(pa, pb, pc, pd, pe)
 REAL *pa;
 REAL *pb;
 REAL *pc;
